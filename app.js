@@ -152,13 +152,6 @@ app.get('/health', (req, res) => {
     })
 })
 
-app.get('/{*splat}', (_, res, next) => {
-    res.status(404).json({
-        success: false,
-        message: "Endpoint not found."
-    })
-})
-
 async function start() {
     await loadModels();
 
