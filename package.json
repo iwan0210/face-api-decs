@@ -1,0 +1,23 @@
+{
+  "name": "face_api_desc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "canvas": "^3.2.3",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "face-api.js": "^0.22.2"
+  },
+  "allowScripts": {
+    "@tensorflow/tfjs-node@4.22.0": true,
+    "canvas@3.2.3": true,
+    "core-js@3.29.1": true
+  }
+}
