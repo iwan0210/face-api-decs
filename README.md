@@ -42,7 +42,7 @@ The application loads all required models before starting the HTTP server.
 
 ## API
 
-### `GET /health`
+### `GET /api/health`
 
 Returns the service and model loading status.
 
@@ -55,7 +55,7 @@ Returns the service and model loading status.
 
 No authentication is required.
 
-### `POST /face/descriptor`
+### `POST /api/face/descriptor`
 
 Detects a single face and generates a **128-element floating-point descriptor**.
 
@@ -77,7 +77,7 @@ Example:
 ```bash
 IMAGE_BASE64="$(base64 -w 0 ./face.jpg)"
 
-curl -X POST http://localhost:3000/face/descriptor \
+curl -X POST http://localhost:3000/api/face/descriptor \
   -H "Content-Type: application/json" \
   -H "X-API-Token: replace-with-your-secret-token" \
   -d "$(jq -n --arg image "$IMAGE_BASE64" '{image: $image}')"
