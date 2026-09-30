@@ -152,7 +152,7 @@ app.get('/health', (req, res) => {
     })
 })
 
-app.use((_, res, next) => {
+app.get('/{*splat}', (_, res, next) => {
     res.status(404).json({
         success: false,
         message: "Endpoint not found."
