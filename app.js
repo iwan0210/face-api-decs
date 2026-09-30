@@ -109,16 +109,17 @@ app.post('/face/descriptor',
                 .withFaceLandmarks()
                 .withFaceDescriptor()
 
+            const processTimeSeconds =
+                Number(process.hrtime.bigint() - startTime) / 1_000_000_000
+
             if (!detection) {
                 return res.status(200).json({
                     success: true,
                     detected: false,
-                    message: 'No face detected'
+                    message: 'No face detected',
+                    processTimeSeconds: Number(processTimeSeconds.toFixed(3))
                 })
             }
-
-            const processTimeSeconds =
-                Number(process.hrtime.bigint() - startTime) / 1_000_000_000
 
             return res.json({
                 success: true,
