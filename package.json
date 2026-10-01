@@ -15,6 +15,9 @@
     "express": "^5.2.1",
     "face-api.js": "^0.22.2"
   },
+  "overrides": {
+    "@tensorflow/tfjs-core": "4.22.0"
+  },
   "allowScripts": {
     "@tensorflow/tfjs-node@4.22.0": true,
     "canvas@3.2.3": true,

@@ -6,7 +6,7 @@ The descriptor is intended for face recognition workflows and systems that requi
 
 ## Requirements
 
-* **Node.js 24** — the version used and tested with this service
+* **Node.js 22** — the version used and tested with this service
 * Native dependencies required by `canvas` and `@tensorflow/tfjs-node`
 * Model files in the `models/` directory
 
@@ -227,7 +227,7 @@ For production, the Node.js service can remain on a private/internal port while 
 This project has been developed and tested with:
 
 ```text
-Node.js 24
+Node.js 22
 ```
 
 Other Node.js versions have not been specifically tested.
